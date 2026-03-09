@@ -1,0 +1,6 @@
+claim_id,pothole_id,claimant_name,claimant_address,claimant_phone,damage_type,damage_amount,claim_date,claim_status
+5001,1001,Marcus Hill,1500 Rio Grande St Austin TX,512-555-2001,Tire damage,425.00,2026-02-02,filed
+5002,1003,Sonia Brooks,9100 Research Blvd Austin TX,512-555-2002,Wheel alignment,310.00,2026-02-06,under review
+5003,1004,Henry Cole,2200 E 7th St Austin TX,512-555-2003,Hubcap damage,120.00,2026-02-08,approved
+5004,1006,Jessica Tran,4500 Duval St Austin TX,512-555-2004,Suspension damage,980.00,2026-02-11,filed
+5005,1008,Ryan Flores,2600 Manor Rd Austin TX,512-555-2005,Tire damage,355.00,2026-02-13,under review

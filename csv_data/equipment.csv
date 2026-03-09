@@ -1,0 +1,6 @@
+equipment_id,equipment_name,equipment_type,hourly_rate,availability_status
+301,Asphalt Roller A,roller,45.00,available
+302,Dump Truck 1,truck,70.00,in use
+303,Air Compressor B,compressor,35.00,available
+304,Patcher Machine X,patcher,85.00,maintenance
+305,Traffic Cone Set,traffic control,10.00,available

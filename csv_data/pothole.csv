@@ -1,0 +1,9 @@
+pothole_id,user_id,report_date,street_address,street_location,district_id,pothole_size
+1001,1,2026-02-01,500 W 6th St Austin TX,middle,1,9
+1002,2,2026-02-03,1200 Guadalupe St Austin TX,curb,1,6
+1003,3,2026-02-04,8900 Burnet Rd Austin TX,intersection,2,8
+1004,4,2026-02-06,2101 E Cesar Chavez St Austin TX,lane edge,4,4
+1005,5,2026-02-07,1600 S 1st St Austin TX,shoulder,3,7
+1006,1,2026-02-09,4400 Speedway Austin TX,middle,2,10
+1007,6,2026-02-10,300 Barton Springs Rd Austin TX,curb,3,5
+1008,2,2026-02-11,2500 Airport Blvd Austin TX,intersection,4,8
