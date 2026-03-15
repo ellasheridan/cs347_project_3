@@ -20,7 +20,7 @@ SELECT d.district_name,
 FROM pothole p
 JOIN district d ON p.district_id = d.district_id
 JOIN work_order wo ON p.pothole_id = wo.pothole_id
-WHERE p.repair_priority = 'High'
+WHERE p.repair_priority = 'high'
   AND wo.pothole_status <> 'repaired'
 ORDER BY d.district_name, p.pothole_size DESC;
 
@@ -46,13 +46,14 @@ ORDER BY total_repair_cost DESC;
 
 -- Report 4: Property damage claims above $300, with related pothole and repair status information.
 SELECT c.claim_id,
-       c.claimant_name,
+       CONCAT(u.first_name, ' ', u.last_name) AS claimant_name,
        c.damage_type,
        c.damage_amount,
        p.pothole_id,
        p.street_address,
        wo.pothole_status
 FROM property_damage_claim c
+JOIN citizen_user u ON c.user_id = u.user_id
 JOIN pothole p ON c.pothole_id = p.pothole_id
 JOIN work_order wo ON p.pothole_id = wo.pothole_id
 WHERE c.damage_amount > 300
@@ -69,7 +70,7 @@ LEFT JOIN work_order wo ON wc.crew_id = wo.crew_id
 GROUP BY wc.crew_id, wc.crew_name, wc.crew_size
 ORDER BY total_hours_applied DESC, assigned_work_orders DESC;
 
--- Report 6: Equipment utilization across work orders, including hours used and related pothole count.
+-- Report 6: Equipment utilization across work orders, including hours used and number of work orders served.
 SELECT e.equipment_id,
        e.equipment_name,
        e.equipment_type,

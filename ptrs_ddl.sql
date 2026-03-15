@@ -103,9 +103,7 @@ CREATE TABLE work_order_equipment (
 CREATE TABLE property_damage_claim (
     claim_id INT NOT NULL AUTO_INCREMENT,
     pothole_id INT NOT NULL,
-    claimant_name VARCHAR(100) NOT NULL,
-    claimant_address VARCHAR(120) NOT NULL,
-    claimant_phone VARCHAR(20) NOT NULL,
+    user_id INT NOT NULL,
     damage_type VARCHAR(80) NOT NULL,
     damage_amount DECIMAL(10,2) NOT NULL,
     claim_date DATE NOT NULL,
@@ -113,7 +111,9 @@ CREATE TABLE property_damage_claim (
     PRIMARY KEY (claim_id),
     CONSTRAINT chk_damage_amount CHECK (damage_amount >= 0),
     CONSTRAINT fk_claim_pothole
-        FOREIGN KEY (pothole_id) REFERENCES pothole(pothole_id)
+        FOREIGN KEY (pothole_id) REFERENCES pothole(pothole_id),
+    CONSTRAINT fk_claim_user
+        FOREIGN KEY (user_id) REFERENCES citizen_user(user_id)
 );
 
 -- Example load command:
